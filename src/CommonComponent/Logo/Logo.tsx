@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 
 type LogoProps = {
-  isLight?: boolean;
+    isLight?: boolean;
 }
 
-export const Logo = ({ isLight }: LogoProps) => (
+export const Logo = ({isLight}: LogoProps) => (
   <div className="logo">
     <a href="#" className={classNames('logo__link', isLight ? 'logo__link--light' : undefined)}>
       <span className="logo__letter logo__letter--1">W</span>

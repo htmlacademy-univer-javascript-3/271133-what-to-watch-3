@@ -1,11 +1,11 @@
-import {Logo} from '../Logo/Logo.tsx';
-import {ReactNode} from 'react';
+import { Logo } from '../Logo/Logo.tsx';
+import { ReactNode } from 'react';
 
 type HeaderProps = {
-  children?: ReactNode;
+    children?: ReactNode;
 }
 
-export const Header = ({ children }: HeaderProps) => (
+export const Header = ({children}: HeaderProps) => (
   <header className="page-header film-card__head">
     <Logo />
     {children}

@@ -7,7 +7,7 @@ export const PlayerPage = () => (
     />
 
     <button type="button" className="player__exit">
-      Exit
+            Exit
     </button>
 
     <div className="player__controls">
@@ -19,7 +19,7 @@ export const PlayerPage = () => (
             max="100"
           />
           <div className="player__toggler" style={{left: '30%'}}>
-            Toggler
+                        Toggler
           </div>
         </div>
         <div className="player__time-value">1:30:29</div>
