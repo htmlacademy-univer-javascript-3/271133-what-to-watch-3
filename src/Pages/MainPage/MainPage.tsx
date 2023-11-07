@@ -1,13 +1,13 @@
-import {FilmCard} from '../../CommonComponent/FilmCard/FilmCard.tsx';
-import {Footer} from '../../CommonComponent/Footer/Footer.tsx';
-import {Header} from '../../CommonComponent/Header/Header.tsx';
+import { FilmCard } from '../../CommonComponent/FilmCard/FilmCard.tsx';
+import { Footer } from '../../CommonComponent/Footer/Footer.tsx';
+import { Header } from '../../CommonComponent/Header/Header.tsx';
 
 const FILM_COUNT = 20;
 
 type MainProps = {
-  name: string;
-  genre: string;
-  releaseDate: number;
+    name: string;
+    genre: string;
+    releaseDate: number;
 };
 
 export const MainPage = ({name, genre, releaseDate}: MainProps) => (
@@ -22,7 +22,7 @@ export const MainPage = ({name, genre, releaseDate}: MainProps) => (
 
       <h1 className="visually-hidden">WTW</h1>
 
-      <Header/>
+      <Header />
 
       <div className="film-card__wrap">
         <div className="film-card__info">
@@ -68,70 +68,70 @@ export const MainPage = ({name, genre, releaseDate}: MainProps) => (
         <ul className="catalog__genres-list">
           <li className="catalog__genres-item catalog__genres-item--active">
             <a href="#" className="catalog__genres-link">
-              All genres
+                            All genres
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Comedies
+                            Comedies
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Crime
+                            Crime
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Documentary
+                            Documentary
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Dramas
+                            Dramas
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Horror
+                            Horror
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Kids & Family
+                            Kids & Family
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Romance
+                            Romance
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Sci-Fi
+                            Sci-Fi
             </a>
           </li>
           <li className="catalog__genres-item">
             <a href="#" className="catalog__genres-link">
-              Thrillers
+                            Thrillers
             </a>
           </li>
         </ul>
 
         <div className="catalog__films-list">
           {new Array(FILM_COUNT).fill(0).map(() => (
-            <FilmCard key={0}/>
+            <FilmCard key={0} />
           ))}
         </div>
 
         <div className="catalog__more">
           <button className="catalog__button" type="button">
-            Show more
+                        Show more
           </button>
         </div>
       </section>
 
-      <Footer/>
+      <Footer />
     </div>
   </>
 );
