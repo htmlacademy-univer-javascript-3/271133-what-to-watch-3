@@ -1,32 +1,53 @@
-import { Link } from 'react-router-dom';
+import { Rate } from '../Rate/Rate.tsx';
+import { useCallback, useState } from 'react';
 
-export type FilmCardProps = {
-    id: number;
-    name: string;
-    imgSrc: string;
-    onMouseEnter?: () => void;
-    onMouseLeave?: () => void;
+export type ReviewForm = {
+    rating: number;
+    comment: string;
 };
-export const MovieCard = ({
-  id,
-  name,
-  imgSrc,
-  onMouseEnter,
-  onMouseLeave,
-} : FilmCardProps) => (
-  <article className="small-film-card catalog__films-card"
-    onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-  >
-    <div className="small-film-card__image">
-      <img
-        src={imgSrc}
-        alt={name}
-        width="280"
-        height="175"
-      />
+
+export const AddReviewForm = () => {
+  const [reviewForm, setReviewForm] = useState<ReviewForm>({
+    rating: 0,
+    comment: '',
+  });
+  const handleChange = useCallback(
+    (nextValue: Partial<ReviewForm>) => {
+      setReviewForm((prevValue) => prevValue && {...prevValue, ...nextValue});
+    },
+    [setReviewForm],
+  );
+
+  return (
+    <div className="add-review">
+      <form action="#" className="add-review__form">
+        <Rate
+          onClick={(value: number) => {
+            handleChange({
+              rating: value,
+            });
+          }}
+        />
+        <div className="add-review__text">
+          <textarea
+            className="add-review__textarea"
+            name="review-text"
+            id="review-text"
+            placeholder="Review text"
+            value={reviewForm.comment}
+            onChange={(e) => {
+              handleChange({
+                comment: e.target.value,
+              });
+            }}
+          />
+          <div className="add-review__submit">
+            <button className="add-review__btn" type="submit">
+                            Post
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
-    <h3 className="small-film-card__title">
-      <Link className="small-film-card__link" to={`/films/${id}`}>{name}</Link>
-    </h3>
-  </article>
-);
+  );
+};

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export type FilmCardProps = {
+export type MovieCardProps = {
     id: number;
     name: string;
     imgSrc: string;
@@ -13,7 +13,7 @@ export const MovieCard = ({
   imgSrc,
   onMouseEnter,
   onMouseLeave,
-}: FilmCardProps) => (
+}: MovieCardProps) => (
   <article className="small-film-card catalog__films-card"
     onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
   >

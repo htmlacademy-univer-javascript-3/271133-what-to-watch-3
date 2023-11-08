@@ -1,9 +1,13 @@
-export const PlayerPage = () => (
+export type PlayerPageProps = {
+    video: string;
+    poster: string;
+};
+export const PlayerPage = ({ video, poster }: PlayerPageProps) => (
   <div className="player">
     <video
-      src="#"
+      src={video}
       className="player__video"
-      poster="img/player-poster.jpg"
+      poster={poster}
     />
 
     <button type="button" className="player__exit">

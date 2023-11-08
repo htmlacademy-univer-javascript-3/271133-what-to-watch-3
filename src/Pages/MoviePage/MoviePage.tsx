@@ -1,7 +1,7 @@
 import { Footer } from '../../CommonComponent/Footer/Footer.tsx';
 import { Header } from '../../CommonComponent/Header/Header.tsx';
 
-export const FilmPage = () => (
+export const MoviePage = () => (
   <div>
     <section className="film-card film-card--full">
       <div className="film-card__hero">

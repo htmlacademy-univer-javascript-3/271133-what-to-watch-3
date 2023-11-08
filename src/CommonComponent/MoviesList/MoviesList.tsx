@@ -1,32 +1,26 @@
-import { Link } from 'react-router-dom';
+import { MovieCard, MovieCardProps } from '../MovieCard/MovieCard';
+import { useState } from 'react';
 
-export type FilmCardProps = {
-    id: number;
-    name: string;
-    imgSrc: string;
-    onMouseEnter?: () => void;
-    onMouseLeave?: () => void;
+type MoviesListProps = {
+    movies: MovieCardProps[];
 };
-export const MovieCard = ({
-  id,
-  name,
-  imgSrc,
-  onMouseEnter,
-  onMouseLeave,
-}: FilmCardProps) => (
-  <article className="small-film-card catalog__films-card"
-    onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
-  >
-    <div className="small-film-card__image">
-      <img
-        src={imgSrc}
-        alt={name}
-        width="280"
-        height="175"
-      />
+
+export const MoviesList = ({movies}: MoviesListProps) => {
+  const [, setActiveFilm] = useState<number | null>();
+  return (
+    <div className="catalog__films-list">
+      {movies.map((movie) => (
+        <MovieCard
+          key={movie.id}
+          {...movie}
+          onMouseEnter={() => {
+            setActiveFilm(movie.id);
+          }}
+          onMouseLeave={() => {
+            setActiveFilm(null);
+          }}
+        />
+      ))}
     </div>
-    <h3 className="small-film-card__title">
-      <Link className="small-film-card__link" to={`/films/${id}`}>{name}</Link>
-    </h3>
-  </article>
-);
+  );
+};
