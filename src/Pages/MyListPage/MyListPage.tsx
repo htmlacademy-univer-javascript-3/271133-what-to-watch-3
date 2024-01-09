@@ -2,9 +2,13 @@ import { useFavouriteMovies } from '../../hooks/Movies';
 import { MoviesList } from '../../CommonComponent/MoviesList/MoviesList';
 import { Footer } from '../../CommonComponent/Footer/Footer';
 import { Header } from '../../CommonComponent/Header/Header';
+import { useEffect } from 'react';
 
 export const MyListPage = () => {
-  const {data: movies} = useFavouriteMovies();
+  const { data: movies, fetchFavouriteMovies } = useFavouriteMovies();
+  useEffect(() => {
+    fetchFavouriteMovies();
+  }, [fetchFavouriteMovies]);
   return (
     <div className="user-page">
       <Header>
