@@ -1,8 +1,6 @@
 import classNames from 'classnames';
-import { useAppDispatch } from '../../hooks/store.ts';
-
-import { ButtonStyle } from '../../helpers/button-style.ts';
-import { setGenre } from '../../store/films/films.ts';
+import { useAppDispatch } from '../../hooks/Store';
+import { setGenre } from '../../Store/Movies/Movies';
 
 type GenreItemProps = {
     genre: string;
@@ -19,7 +17,6 @@ export const GenreItem = ({ genre, isActive }: GenreItemProps) => {
       })}
     >
       <button
-        style={ButtonStyle}
         className="catalog__genres-link"
         onClick={() => {
           dispatch(setGenre(genre));

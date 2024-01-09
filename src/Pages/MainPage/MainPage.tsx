@@ -104,7 +104,6 @@ export const MainPage = () => {
                   })}
                 >
                   <button
-                    // style={ButtonStyle}
                     className="catalog__genres-link"
                     onClick={() => {
                       dispatch(setGenre(genre));
