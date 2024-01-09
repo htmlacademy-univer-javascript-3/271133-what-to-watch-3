@@ -1,14 +1,14 @@
 import { ReactElement, useEffect, useRef, useState } from 'react';
 
 export type PlayerProps = {
-    videoSrc: string;
-    imgSrc: string;
+  previewVideoLink: string;
+  previewImage: string;
     isHovered: boolean;
 };
 
 export function Player({
-  videoSrc,
-  imgSrc,
+  previewVideoLink,
+  previewImage,
   isHovered,
 }: PlayerProps): ReactElement {
   const playerRef = useRef<HTMLVideoElement | null>(null);
@@ -40,8 +40,8 @@ export function Player({
       ref={playerRef}
       width="280"
       height="175"
-      src={videoSrc}
-      poster={imgSrc}
+      src={previewVideoLink}
+      poster={previewImage}
       muted
     />
   );

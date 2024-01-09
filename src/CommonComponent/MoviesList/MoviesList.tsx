@@ -1,7 +1,8 @@
-import { MovieCard, MovieCardProps } from '../MovieCard/MovieCard';
+import { MovieCard } from '../MovieCard/MovieCard';
+import { MovieListType } from '../../Types/Movies';
 
 type MoviesListProps = {
-    movies: MovieCardProps[];
+    movies: MovieListType[];
 };
 
 export const MoviesList = ({movies}: MoviesListProps) => (
@@ -9,7 +10,10 @@ export const MoviesList = ({movies}: MoviesListProps) => (
     {movies.map((movie) => (
       <MovieCard
         key={movie.id}
-        {...movie}
+        previewImage={movie.previewImage}
+        previewVideoLink={movie.previewVideoLink}
+        name={movie.name}
+        id={movie.id}
       />
     ))}
   </div>
