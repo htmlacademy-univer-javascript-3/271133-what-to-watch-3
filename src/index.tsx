@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from './App.tsx';
-import { MOVIES } from './Mocks/Movies.ts';
-import { REVIEW } from './Mocks/Reviews.ts';
-import { PLAYER } from './Mocks/Player.ts';
+import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { checkAuthAction } from './Store/apiAction';
+import { store } from './Store';
+import { App } from './App';
 
 const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement,
 );
+
+store.dispatch(checkAuthAction());
 
 root.render(
   <React.StrictMode>
-    <App name={'The Grand Budapest Hotel'} genre={'Drama'} releaseDate={2014} movies={MOVIES} player={PLAYER}
-      review={REVIEW}
-    />
-  </React.StrictMode>
+    <Provider store={store}>
+      <ToastContainer />
+      <App />
+    </Provider>
+  </React.StrictMode>,
 );
