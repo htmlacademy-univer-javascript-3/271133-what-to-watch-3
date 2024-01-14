@@ -1,4 +1,4 @@
-import { Star } from './star.jsx';
+import { Star } from './star.tsx';
 
 const MAX_RATE = 10;
 

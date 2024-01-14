@@ -1,4 +1,4 @@
-import { Namespace } from '../Namespace';
+import { Namespace } from '../namespace';
 import { useAppSelector } from '../../hooks/store';
 
 export const useCommentsSelector = () =>

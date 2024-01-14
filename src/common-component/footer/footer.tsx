@@ -1,4 +1,4 @@
-import { Logo } from '../logo/logo.jsx';
+import { Logo } from '../logo/logo.tsx';
 
 export const Footer = () => (
   <footer className="page-footer">

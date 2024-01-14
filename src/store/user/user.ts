@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { AuthorizationStatus } from '../../Types/Auth';
-import { Namespace } from '../Namespace';
+import { AuthorizationStatus } from '../../types/auth';
+import { Namespace } from '../namespace';
 import { checkAuthAction, loginAction, logoutAction } from '../api-action';
 
 type UserState = {

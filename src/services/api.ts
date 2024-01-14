@@ -5,9 +5,9 @@ import axios, {
   AxiosResponse,
 } from 'axios';
 import { StatusCodes } from 'http-status-codes';
-import { getToken } from './token.js';
+import { getToken } from './token.ts';
 import { toast } from 'react-toastify';
-import { Errors, ErrorType } from '../Types/Error.js';
+import { Errors, ErrorType } from '../types/error.ts';
 
 const BACKEND_URL = 'https://13.design.pages.academy/wtw';
 

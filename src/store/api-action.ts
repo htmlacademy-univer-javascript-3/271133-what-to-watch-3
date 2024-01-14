@@ -1,9 +1,9 @@
 import { AxiosInstance } from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { AddCommentType, CommentType, MovieListType, MovieType, PromoMovieType } from '../Types/Movies';
+import { AddCommentType, CommentType, MovieListType, MovieType, PromoMovieType } from '../types/movies';
 import { ApiRoutes } from '../services/api-routes';
-import { AppDispatch, State } from '../Types/State';
-import { AuthData, UserData } from '../Types/Auth';
+import { AppDispatch, State } from '../types/state';
+import { AuthData, UserData } from '../types/auth';
 import { dropToken, saveToken } from '../services/token';
 
 export const fetchMoviesAction = createAsyncThunk<

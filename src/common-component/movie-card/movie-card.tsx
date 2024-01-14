@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Player } from './player';
-import { MovieListType } from '../../Types/Movies';
+import { MovieListType } from '../../types/movies';
 
 
 export const MovieCard = ({

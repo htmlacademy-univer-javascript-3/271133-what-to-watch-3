@@ -1,19 +1,19 @@
 import { useCallback, useEffect } from 'react';
-import {useAppDispatch} from './store.js';
-import {useAllMoviesSelector} from '../store/movies/selector.js';
-import {useCurrentMovieSelector} from '../store/movie/selector.js';
-import {usePromoMovieSelector} from '../store/promo-movie/selector.js';
-import {useSimilarMoviesSelector} from '../store/similar-movies/selector.js';
-import {useFavouriteMoviesSelector} from '../store/favourite-movies/selector.js';
-import {useCommentsSelector} from '../store/comments/selector.js';
 import {
   fetchCommentsAction,
   fetchFavouriteMoviesAction,
   fetchMovieAction,
   fetchMoviesAction,
   fetchPromoMovieAction,
-  fetchSimilarMoviesAction
-} from '../store/api-action.js';
+  fetchSimilarMoviesAction,
+} from '../store/api-action.ts';
+import { useAppDispatch } from './store';
+import { useAllMoviesSelector } from '../store/movies/selector';
+import { useCurrentMovieSelector } from '../store/movie/selector';
+import { useCommentsSelector } from '../store/comments/selector';
+import { useFavouriteMoviesSelector } from '../store/favourite-movies/selector';
+import { usePromoMovieSelector } from '../store/promo-movie/selector';
+import { useSimilarMoviesSelector } from '../store/similar-movies/selector';
 
 export const useMovies = () => {
   const dispatch = useAppDispatch();

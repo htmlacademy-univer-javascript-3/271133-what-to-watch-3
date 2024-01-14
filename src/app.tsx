@@ -21,7 +21,7 @@ export const App = () => (
 
       <Route element={<PrivateRoute />}>
         <Route path="/mylist/" element={<MyListPage/>} />
-        <Route path="/films/${id}/review" element={<AddReviewPage />} />
+        <Route path="/films/:id/review/" element={<AddReviewPage />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />

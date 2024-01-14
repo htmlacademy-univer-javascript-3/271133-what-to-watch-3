@@ -1,18 +1,18 @@
-import { useAuthorizationStatusSelector } from '../../Store/User/Selector';
+import { useAuthorizationStatusSelector } from '../../store/user/selector';
 import { useMovies, usePromoMovie } from '../../hooks/movies';
 import { Header } from '../../common-component/header/header';
 import { Footer } from '../../common-component/footer/footer';
-import { AuthorizationStatus } from '../../Types/Auth';
+import { AuthorizationStatus } from '../../types/auth';
 import { Play } from '../../common-component/buttons/play/play';
 import { Favourite } from '../../common-component/buttons/favourite/favourite';
 import { Loader } from '../../common-component/loader/loader';
-import { useCurrentGenreSelector } from '../../Store/Movies/Selector';
-import { ALL_GENRES, MovieListType } from '../../Types/Movies';
+import { useCurrentGenreSelector } from '../../store/movies/selector';
+import { ALL_GENRES, MovieListType } from '../../types/movies';
 import { useCallback, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { toast } from 'react-toastify';
 import isActive = toast.isActive;
-import { setGenre } from '../../Store/Movies/Movies';
+import { setGenre } from '../../store/movies/movies';
 import { useAppDispatch } from '../../hooks/store';
 import { MoviesList } from '../../common-component/movies-list/movies-list';
 
@@ -53,8 +53,8 @@ export const MainPage = () => {
 
   return (
     <>
-      <section className="movie-card">
-        <div className="movie-card__bg">
+      <section className="film-card">
+        <div className="film-card__bg">
           <img src={promoMovie?.backgroundImage} alt={promoMovie?.name} />
         </div>
 
@@ -62,9 +62,9 @@ export const MainPage = () => {
 
         <Header />
 
-        <div className="movie-card__wrap">
-          <div className="movie-card__info">
-            <div className="movie-card__poster">
+        <div className="film-card__wrap">
+          <div className="film-card__info">
+            <div className="film-card__poster">
               <img
                 src={promoMovie?.posterImage}
                 alt={promoMovie?.name}
@@ -73,14 +73,14 @@ export const MainPage = () => {
               />
             </div>
 
-            <div className="movie-card__desc">
-              <h2 className="movie-card__title">{promoMovie?.name}</h2>
-              <p className="movie-card__meta">
-                <span className="movie-card__genre">{promoMovie?.genre}</span>
-                <span className="movie-card__year">{promoMovie?.released}</span>
+            <div className="film-card__desc">
+              <h2 className="film-card__title">{promoMovie?.name}</h2>
+              <p className="film-card__meta">
+                <span className="film-card__genre">{promoMovie?.genre}</span>
+                <span className="film-card__year">{promoMovie?.released}</span>
               </p>
 
-              <div className="movie-card__buttons">
+              <div className="film-card__buttons">
                 <Play movieId={promoMovie?.id} />
                 {authStatus === AuthorizationStatus.Auth && (
                   <Favourite movieId={promoMovie?.id} />

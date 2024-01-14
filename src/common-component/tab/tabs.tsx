@@ -1,4 +1,4 @@
-import { TabProps } from './Tab.jsx';
+import { TabProps } from './tab.tsx';
 import { ReactElement, useState } from 'react';
 import classNames from 'classnames';
 
