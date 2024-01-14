@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ALL_GENRES, MovieListType } from '../../Types/Movies';
-import { Namespace } from '../Namespace';
-import { fetchMoviesAction } from '../apiAction';
+import { ALL_GENRES, MovieListType } from '../../types/movies';
+import { Namespace } from '../namespace';
+import { fetchMoviesAction } from '../api-action';
 
 type MoviesState = {
     isLoading: boolean;

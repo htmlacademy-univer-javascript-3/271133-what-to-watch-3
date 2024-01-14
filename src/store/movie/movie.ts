@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { Namespace } from '../Namespace';
-import { fetchMovieAction } from '../apiAction';
+import { fetchMovieAction } from '../api-action';
 import { MovieType } from '../../Types/Movies';
 
 type MovieState = {

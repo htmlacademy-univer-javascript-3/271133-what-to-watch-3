@@ -1,4 +1,4 @@
-import { Rate } from '../Rate/Rate.tsx';
+import { Rate } from '../rate/rate.jsx';
 import { useCallback, useState } from 'react';
 
 export type ReviewForm = {

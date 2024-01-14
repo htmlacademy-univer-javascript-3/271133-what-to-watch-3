@@ -1,5 +1,5 @@
-import { MovieCard } from '../movie-card/MovieCard';
 import { MovieListType } from '../../Types/Movies';
+import {MovieCard} from '../movie-card/movie-card.jsx';
 
 type MoviesListProps = {
     movies: MovieListType[];

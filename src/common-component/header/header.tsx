@@ -1,4 +1,4 @@
-import { Logo } from '../Logo/Logo.tsx';
+import { Logo } from '../logo/logo.jsx';
 import { ReactNode } from 'react';
 
 type HeaderProps = {

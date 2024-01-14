@@ -1,7 +1,7 @@
 import { MouseEvent, useCallback, useEffect } from 'react';
-import { useFavouriteMovies } from '../../../hooks/Movies';
-import { useAppDispatch } from '../../../hooks/Store';
-import { postFavouriteMovieAction } from '../../../Store/apiAction';
+import { useFavouriteMovies } from '../../../hooks/movies';
+import { useAppDispatch } from '../../../hooks/store';
+import { postFavouriteMovieAction } from '../../../store/api-action';
 
 export type FavouriteButtonProps = {
     movieId?: string;

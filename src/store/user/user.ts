@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { AuthorizationStatus } from '../../Types/Auth';
 import { Namespace } from '../Namespace';
-import { checkAuthAction, loginAction, logoutAction } from '../apiAction';
+import { checkAuthAction, loginAction, logoutAction } from '../api-action';
 
 type UserState = {
     avatarLink: string;

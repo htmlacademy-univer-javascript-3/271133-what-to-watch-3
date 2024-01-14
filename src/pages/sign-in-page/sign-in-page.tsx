@@ -2,7 +2,7 @@ import { useState, MouseEvent, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../hooks/store';
 import { useAuthorizationStatusSelector } from '../../Store/User/Selector';
-import { loginAction } from '../../Store/apiAction';
+import { loginAction } from '../../Store/api-action';
 import { AuthorizationStatus } from '../../Types/Auth';
 import { Logo } from '../../common-component/logo/logo';
 import { Footer } from '../../common-component/footer/footer';

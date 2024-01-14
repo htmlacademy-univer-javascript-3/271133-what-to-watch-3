@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Player } from './Player';
+import { Player } from './player';
 import { MovieListType } from '../../Types/Movies';
 
 

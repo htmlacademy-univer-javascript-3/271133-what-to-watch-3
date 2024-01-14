@@ -1,4 +1,4 @@
-import { GenreItem } from './Genre.tsx';
+import { GenreItem } from './genre.jsx';
 
 type GenresListProps = {
     genres: string[];

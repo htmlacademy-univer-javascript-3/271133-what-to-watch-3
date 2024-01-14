@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { MovieListType } from '../../Types/Movies';
 import { Namespace } from '../Namespace';
-import { fetchSimilarMoviesAction } from '../apiAction';
+import { fetchSimilarMoviesAction } from '../api-action';
 
 type SimilarMoviesState = {
     isLoading: boolean;

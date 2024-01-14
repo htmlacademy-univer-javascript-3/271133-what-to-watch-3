@@ -1,11 +1,11 @@
-import { MainPage } from './pages/main-page/main-page.tsx';
+import { MainPage } from './pages/main-page/main-page.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { NotFoundPage } from './pages/not-found-page/not-found-page.tsx';
-import { SignInPage } from './pages/sign-in-page/sign-in-page.tsx';
-import { MyListPage } from './pages/my-list-page/my-list-page.tsx';
-import { MoviePage } from './pages/movie-page/movie-page.tsx';
-import { PlayerPage} from './pages/player-page/player-page.tsx';
-import { PrivateRoute } from './common-component/private-route/private-route.tsx';
+import { NotFoundPage } from './pages/not-found-page/not-found-page.jsx';
+import { SignInPage } from './pages/sign-in-page/sign-in-page.jsx';
+import { MyListPage } from './pages/my-list-page/my-list-page.jsx';
+import { MoviePage } from './pages/movie-page/movie-page.jsx';
+import { PlayerPage} from './pages/player-page/player-page.jsx';
+import { PrivateRoute } from './common-component/private-route/private-route.jsx';
 import { AddReviewPage } from './pages/add-review-page/add-review-page';
 
 
