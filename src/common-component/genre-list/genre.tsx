@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import { useAppDispatch } from '../../hooks/Store';
-import { setGenre } from '../../Store/Movies/Movies';
+import { useAppDispatch } from '../../hooks/store';
+import { setGenre } from '../../store/movies/movies';
 
 type GenreItemProps = {
     genre: string;

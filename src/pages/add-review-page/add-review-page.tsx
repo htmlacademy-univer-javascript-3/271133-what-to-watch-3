@@ -11,9 +11,9 @@ export const AddReviewPage = () => {
 
   return (
     <Loader isLoading={isLoading} height={'100vh'} backgroundColor={'#e1b0b2'}>
-      <section className="movie-card movie-card--full">
-        <div className="movie-card__header">
-          <div className="movie-card__bg">
+      <section className="film-card film-card--full">
+        <div className="film-card__header">
+          <div className="film-card__bg">
             <img src={movie?.backgroundImage} alt={movie?.name} />
           </div>
 
@@ -33,7 +33,7 @@ export const AddReviewPage = () => {
             </nav>
           </Header>
 
-          <div className="movie-card__poster movie-card__poster--small">
+          <div className="film-card__poster film-card__poster--small">
             <img
               src={movie?.posterImage}
               alt={movie?.name}

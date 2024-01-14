@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Namespace } from '../Namespace';
-import { CommentType } from '../../Types/Movies';
-import { fetchCommentsAction } from '../apiAction';
+import { Namespace } from '../namespace';
+import { CommentType } from '../../types/movies';
+import { fetchCommentsAction } from '../api-action';
 
 type CommentsState = {
     isLoading: boolean;

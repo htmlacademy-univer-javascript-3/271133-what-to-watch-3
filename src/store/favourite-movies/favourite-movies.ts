@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Namespace } from '../Namespace';
-import { fetchFavouriteMoviesAction } from '../apiAction';
-import { MovieListType } from '../../Types/Movies';
+import { Namespace } from '../namespace';
+import { fetchFavouriteMoviesAction } from '../api-action';
+import { MovieListType } from '../../types/movies';
 
 type FavouriteMoviesState = {
     isLoading: boolean;

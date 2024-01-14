@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { usePathId } from '../../hooks/use-path-id';
-import { useAuthorizationStatusSelector } from '../../Store/User/Selector';
+import { useAuthorizationStatusSelector } from '../../store/user/selector';
 import { useMovie, useSimilarMovies } from '../../hooks/movies';
 import { Loader } from '../../common-component/loader/loader';
-import { AuthorizationStatus } from '../../Types/Auth';
+import { AuthorizationStatus } from '../../types/auth';
 import { Play } from '../../common-component/buttons/play/play';
 import { Favourite } from '../../common-component/buttons/favourite/favourite';
 import { Tabs } from '../../common-component/tab/tabs';
@@ -53,9 +53,9 @@ export const MoviePage = () => {
                     )}
                     {authStatus === AuthorizationStatus.Auth && (
                       <Link
-                        to={`/films/${id} +'/review'}`}
+                        to={`/films/${id}/review`}
                         className="btn film-card__button"
-                      >
+                      >3
                               Add review
                       </Link>
                     )}

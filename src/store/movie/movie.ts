@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Namespace } from '../Namespace';
-import { fetchMovieAction } from '../apiAction';
-import { MovieType } from '../../Types/Movies';
+import { Namespace } from '../namespace';
+import { fetchMovieAction } from '../api-action';
+import { MovieType } from '../../types/movies';
 
 type MovieState = {
     isLoading: boolean;
