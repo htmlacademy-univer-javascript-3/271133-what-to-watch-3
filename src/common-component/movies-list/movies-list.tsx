@@ -9,6 +9,7 @@ export const MoviesList = ({movies}: MoviesListProps) => (
   <div className="catalog__films-list">
     {movies.map((movie) => (
       <MovieCard
+        genre={movie.genre}
         key={movie.id}
         previewImage={movie.previewImage}
         previewVideoLink={movie.previewVideoLink}
