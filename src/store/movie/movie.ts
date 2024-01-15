@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { Namespace } from '../namespace';
-import { fetchMovieAction } from '../api-action';
-import { MovieType } from '../../types/movies';
+import {createSlice} from '@reduxjs/toolkit';
+import {Namespace} from '../namespace';
+import {fetchMovieAction} from '../api-action';
+import {MovieType} from '../../types/movies';
 
 type MovieState = {
-    isLoading: boolean;
-    error?: string;
-    data?: MovieType;
+  isLoading: boolean;
+  error?: string;
+  data?: MovieType;
 };
 
 const initialState: MovieState = {

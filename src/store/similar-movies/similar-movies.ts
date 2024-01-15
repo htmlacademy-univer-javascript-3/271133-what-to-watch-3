@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { MovieListType } from '../../types/movies';
-import { Namespace } from '../namespace';
-import { fetchSimilarMoviesAction } from '../api-action';
+import {createSlice} from '@reduxjs/toolkit';
+import {MovieListType} from '../../types/movies';
+import {Namespace} from '../namespace';
+import {fetchSimilarMoviesAction} from '../api-action';
 
 type SimilarMoviesState = {
-    isLoading: boolean;
-    error?: string;
-    data: Array<MovieListType>;
+  isLoading: boolean;
+  error?: string;
+  data: Array<MovieListType>;
 };
 
 const initialState: SimilarMoviesState = {

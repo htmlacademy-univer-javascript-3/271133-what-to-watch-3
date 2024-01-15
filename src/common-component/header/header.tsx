@@ -1,16 +1,18 @@
-import { Logo } from '../logo/logo.tsx';
-import { ReactNode, useCallback } from 'react';
-import { useAuthorizationStatusSelector, useAvatarLinkSelector } from '../../store/user/selector';
-import { useAppDispatch } from '../../hooks/store';
-import { logoutAction } from '../../store/api-action';
-import { Link } from 'react-router-dom';
-import { AuthorizationStatus } from '../../types/auth';
+import {Logo} from '../logo/logo.tsx';
+import {ReactNode, useCallback, MouseEvent} from 'react';
+import {useAuthorizationStatusSelector, useAvatarLinkSelector} from '../../store/user/selector';
+import {useAppDispatch} from '../../hooks/store';
+import {logoutAction} from '../../store/api-action';
+import {Link} from 'react-router-dom';
+import {AuthorizationStatus} from '../../types/auth';
+import classNames from 'classnames';
 
 type HeaderProps = {
-    children?: ReactNode;
+  children?: ReactNode;
+  isListPage?: boolean;
 }
 
-export const Header = ({children}: HeaderProps) => {
+export const Header = ({children, isListPage}: HeaderProps) => {
   const authStatus = useAuthorizationStatusSelector();
   const avatarLink = useAvatarLinkSelector();
   const dispatch = useAppDispatch();
@@ -23,8 +25,8 @@ export const Header = ({children}: HeaderProps) => {
   );
 
   return (
-    <header className="page-header film-card__head">
-      <Logo />
+    <header className={classNames('page-header', isListPage ? 'user-page__head' : 'film-card__head')}>
+      <Logo/>
       {children}
       {authStatus === AuthorizationStatus.Auth ? (
         <ul className="user-block">
@@ -42,14 +44,14 @@ export const Header = ({children}: HeaderProps) => {
           </li>
           <li className="user-block__item">
             <a onClick={handleSignOut} className="user-block__link">
-                            Sign out
+              Sign out
             </a>
           </li>
         </ul>
       ) : (
         <div className="user-block">
           <Link to="/login" className="user-block__link">
-                        Sign in
+            Sign in
           </Link>
         </div>
       )}

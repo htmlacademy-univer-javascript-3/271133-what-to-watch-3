@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 type LogoProps = {
-    isLight?: boolean;
+  isLight?: boolean;
 }
 
 export const Logo = ({isLight}: LogoProps) => (

@@ -4,10 +4,10 @@ import axios, {
   AxiosRequestConfig,
   AxiosResponse,
 } from 'axios';
-import { StatusCodes } from 'http-status-codes';
-import { getToken } from './token.ts';
-import { toast } from 'react-toastify';
-import { Errors, ErrorType } from '../types/error.ts';
+import {StatusCodes} from 'http-status-codes';
+import {getToken} from './token.ts';
+import {toast} from 'react-toastify';
+import {Errors, ErrorType} from '../types/error.ts';
 
 const BACKEND_URL = 'https://13.design.pages.academy/wtw';
 
@@ -42,7 +42,7 @@ export const createAPI = (): AxiosInstance => {
     (response) => response,
     (error: AxiosError<ErrorType>) => {
       if (error.response && shouldDisplayError(error.response)) {
-        const { message, errorType, details } = error.response.data;
+        const {message, errorType, details} = error.response.data;
 
         if (errorType === Errors.VALIDATION_ERROR) {
           toast.error(details[0].messages[0]);

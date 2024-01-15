@@ -1,5 +1,5 @@
-import { useAppSelector } from '../../hooks/store';
-import { Namespace } from '../namespace';
+import {useAppSelector} from '../../hooks/store';
+import {Namespace} from '../namespace';
 
 export const useAuthorizationStatusSelector = () =>
   useAppSelector((state) => state[Namespace.User].authorizationStatus);

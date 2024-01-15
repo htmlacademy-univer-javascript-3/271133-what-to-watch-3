@@ -1,11 +1,11 @@
-import { useState, MouseEvent, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../hooks/store';
-import { useAuthorizationStatusSelector } from '../../store/user/selector';
-import { loginAction } from '../../store/api-action';
-import { AuthorizationStatus } from '../../types/auth';
-import { Logo } from '../../common-component/logo/logo';
-import { Footer } from '../../common-component/footer/footer';
+import {useState, MouseEvent, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {useAppDispatch} from '../../hooks/store';
+import {useAuthorizationStatusSelector} from '../../store/user/selector';
+import {loginAction} from '../../store/api-action';
+import {AuthorizationStatus} from '../../types/auth';
+import {Logo} from '../../common-component/logo/logo';
+import {Footer} from '../../common-component/footer/footer';
 
 export const SignInPage = () => {
   const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ export const SignInPage = () => {
   const [password, setPassword] = useState('');
   const handleSubmit = (event: MouseEvent<HTMLElement>) => {
     event.preventDefault();
-    dispatch(loginAction({ email, password })).then((result) => {
+    dispatch(loginAction({email, password})).then((result) => {
       if (result.payload) {
         navigate('/');
       }
@@ -31,7 +31,7 @@ export const SignInPage = () => {
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
-        <Logo />
+        <Logo/>
         <h1 className="page-title user-page__title">Sign in</h1>
       </header>
 
@@ -52,7 +52,7 @@ export const SignInPage = () => {
                 className="sign-in__label visually-hidden"
                 htmlFor="user-email"
               >
-                  Email address
+                Email address
               </label>
             </div>
             <div className="sign-in__field">
@@ -69,7 +69,7 @@ export const SignInPage = () => {
                 className="sign-in__label visually-hidden"
                 htmlFor="user-password"
               >
-                  Password
+                Password
               </label>
             </div>
           </div>
@@ -79,13 +79,13 @@ export const SignInPage = () => {
               type="submit"
               onClick={handleSubmit}
             >
-                Sign in
+              Sign in
             </button>
           </div>
         </form>
       </div>
 
-      <Footer />
+      <Footer/>
     </div>
   );
 };

@@ -1,12 +1,12 @@
-import { PromoMovieType } from '../../types/movies';
-import { Namespace } from '../namespace';
-import { createSlice } from '@reduxjs/toolkit';
-import { fetchPromoMovieAction } from '../api-action';
+import {PromoMovieType} from '../../types/movies';
+import {Namespace} from '../namespace';
+import {createSlice} from '@reduxjs/toolkit';
+import {fetchPromoMovieAction} from '../api-action';
 
 type PromoMovieState = {
-    isLoading: boolean;
-    error?: string;
-    data?: PromoMovieType;
+  isLoading: boolean;
+  error?: string;
+  data?: PromoMovieType;
 };
 
 const initialState: PromoMovieState = {

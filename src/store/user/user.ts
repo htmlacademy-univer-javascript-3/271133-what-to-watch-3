@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { AuthorizationStatus } from '../../types/auth';
-import { Namespace } from '../namespace';
-import { checkAuthAction, loginAction, logoutAction } from '../api-action';
+import {createSlice} from '@reduxjs/toolkit';
+import {AuthorizationStatus} from '../../types/auth';
+import {Namespace} from '../namespace';
+import {checkAuthAction, loginAction, logoutAction} from '../api-action';
 
 type UserState = {
-    avatarLink: string;
-    authorizationStatus: AuthorizationStatus;
+  avatarLink: string;
+  authorizationStatus: AuthorizationStatus;
 };
 
 const initialState: UserState = {

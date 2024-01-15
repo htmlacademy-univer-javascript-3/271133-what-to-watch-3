@@ -1,5 +1,5 @@
 import { Namespace } from '../namespace';
-import { useAppSelector } from '../../hooks/store';
+import { useAppSelector } from '../../hooks/store.ts';
 
 export const useAllMoviesSelector = () =>
   useAppSelector((state) => state[Namespace.Movies]);

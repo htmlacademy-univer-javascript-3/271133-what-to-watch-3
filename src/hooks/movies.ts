@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import {useCallback, useEffect} from 'react';
 import {
   fetchCommentsAction,
   fetchFavouriteMoviesAction,
@@ -7,13 +7,13 @@ import {
   fetchPromoMovieAction,
   fetchSimilarMoviesAction,
 } from '../store/api-action.ts';
-import { useAppDispatch } from './store';
-import { useAllMoviesSelector } from '../store/movies/selector';
-import { useCurrentMovieSelector } from '../store/movie/selector';
-import { useCommentsSelector } from '../store/comments/selector';
-import { useFavouriteMoviesSelector } from '../store/favourite-movies/selector';
-import { usePromoMovieSelector } from '../store/promo-movie/selector';
-import { useSimilarMoviesSelector } from '../store/similar-movies/selector';
+import {useAppDispatch} from './store';
+import {useAllMoviesSelector} from '../store/movies/selector';
+import {useCurrentMovieSelector} from '../store/movie/selector';
+import {useCommentsSelector} from '../store/comments/selector';
+import {useFavouriteMoviesSelector} from '../store/favourite-movies/selector';
+import {usePromoMovieSelector} from '../store/promo-movie/selector';
+import {useSimilarMoviesSelector} from '../store/similar-movies/selector';
 
 export const useMovies = () => {
   const dispatch = useAppDispatch();
@@ -33,8 +33,8 @@ export const useMovie = (id: string) => {
     dispatch(fetchMovieAction(id));
   }, [dispatch, id]);
 
-  const { data, isLoading, error } = useCurrentMovieSelector();
-  return { data: data, isLoading, error };
+  const {data, isLoading, error} = useCurrentMovieSelector();
+  return {data: data, isLoading, error};
 };
 
 export const usePromoMovie = () => {
@@ -44,8 +44,8 @@ export const usePromoMovie = () => {
     dispatch(fetchPromoMovieAction());
   }, [dispatch]);
 
-  const { data, isLoading, error } = usePromoMovieSelector();
-  return { data: data, isLoading, error };
+  const {data, isLoading, error} = usePromoMovieSelector();
+  return {data: data, isLoading, error};
 };
 
 export const useSimilarMovies = (id: string) => {
@@ -55,8 +55,8 @@ export const useSimilarMovies = (id: string) => {
     dispatch(fetchSimilarMoviesAction(id));
   }, [dispatch, id]);
 
-  const { data, isLoading, error } = useSimilarMoviesSelector();
-  return { data: data, isLoading, error };
+  const {data, isLoading, error} = useSimilarMoviesSelector();
+  return {data: data, isLoading, error};
 };
 
 export const useFavouriteMovies = () => {
@@ -66,8 +66,8 @@ export const useFavouriteMovies = () => {
     dispatch(fetchFavouriteMoviesAction());
   }, [dispatch]);
 
-  const { data, isLoading, error } = useFavouriteMoviesSelector();
-  return { data: data, isLoading, error, fetchFavouriteMovies };
+  const {data, isLoading, error} = useFavouriteMoviesSelector();
+  return {data: data, isLoading, error, fetchFavouriteMovies};
 };
 
 export const useComments = (id: string) => {
@@ -77,6 +77,6 @@ export const useComments = (id: string) => {
     dispatch(fetchCommentsAction(id));
   }, [dispatch, id]);
 
-  const { data, isLoading, error } = useCommentsSelector();
-  return { data: data, isLoading, error };
+  const {data, isLoading, error} = useCommentsSelector();
+  return {data: data, isLoading, error};
 };

@@ -1,7 +1,8 @@
-import { MouseEvent, useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { usePathId } from '../../hooks/use-path-id';
-import { useMovie } from '../../hooks/movies';
+import {MouseEvent, useEffect, useRef, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {usePathId} from '../../hooks/use-path-id';
+import {useMovie} from '../../hooks/movies';
+
 const convertTimeToPlayerFormat = (time: number) => {
   const hours = Math.floor(time / 3600);
   const minutes = Math.floor((time % 3600) / 60);
@@ -19,7 +20,7 @@ const convertTimeToPlayerFormat = (time: number) => {
 };
 export const PlayerPage = () => {
   const id = usePathId();
-  const { data: film } = useMovie(id);
+  const {data: film} = useMovie(id);
   const [isPlaying, setIsPlaying] = useState(false);
   const [videoProgress, setVideoProgress] = useState(0);
   const [playerTime, setPlayerTime] = useState(0);
@@ -82,7 +83,7 @@ export const PlayerPage = () => {
   };
 
   return (
-    <div className="player" style={{ userSelect: 'none' }}>
+    <div className="player" style={{userSelect: 'none'}}>
       <video
         src={film?.videoLink}
         className="player__video"
@@ -96,7 +97,7 @@ export const PlayerPage = () => {
         className="player__exit"
         onClick={() => navigate('/')}
       >
-                Exit
+        Exit
       </button>
 
       <div className="player__controls">
@@ -111,9 +112,9 @@ export const PlayerPage = () => {
             />
             <div
               className="player__toggler"
-              style={{ left: `${videoProgress}%` }}
+              style={{left: `${videoProgress}%`}}
             >
-                            Toggler
+              Toggler
             </div>
           </div>
           <div className="player__time-value">

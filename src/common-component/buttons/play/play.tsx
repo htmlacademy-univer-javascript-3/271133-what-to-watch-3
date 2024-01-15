@@ -1,18 +1,18 @@
-import { MouseEvent, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {MouseEvent, useCallback} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 export type PlayButtonProps = {
-    movieId?: string;
+  movieId?: string;
 };
 
-export const Play = ({ movieId }: PlayButtonProps) => {
+export const Play = ({movieId}: PlayButtonProps) => {
   const navigate = useNavigate();
 
   const handleClick = useCallback(
     (e: MouseEvent<HTMLElement>) => {
       e.preventDefault();
       if (movieId) {
-        navigate(`/player/${ movieId}`);
+        navigate(`/player/${movieId}`);
       }
     },
     [movieId, navigate],

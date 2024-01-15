@@ -1,14 +1,14 @@
-import { MouseEvent, useCallback, useEffect } from 'react';
-import { useFavouriteMovies } from '../../../hooks/movies';
-import { useAppDispatch } from '../../../hooks/store';
-import { postFavouriteMovieAction } from '../../../store/api-action';
+import {MouseEvent, useCallback, useEffect} from 'react';
+import {useFavouriteMovies} from '../../../hooks/movies';
+import {useAppDispatch} from '../../../hooks/store';
+import {postFavouriteMovieAction} from '../../../store/api-action';
 
 export type FavouriteButtonProps = {
-    movieId?: string;
+  movieId?: string;
 };
 
-export const Favourite = ({ movieId }: FavouriteButtonProps) => {
-  const { data: movies, fetchFavouriteMovies } = useFavouriteMovies();
+export const Favourite = ({movieId}: FavouriteButtonProps) => {
+  const {data: movies, fetchFavouriteMovies} = useFavouriteMovies();
   useEffect(() => {
     fetchFavouriteMovies();
   }, [fetchFavouriteMovies]);
@@ -45,7 +45,7 @@ export const Favourite = ({ movieId }: FavouriteButtonProps) => {
         />
       </svg>
       <span>My list</span>
-      <span className='movie-card__count'>{movies.length}</span>
+      <span className='film-card__count'>{movies.length}</span>
     </button>
   );
 };

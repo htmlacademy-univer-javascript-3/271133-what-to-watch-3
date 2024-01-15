@@ -15,11 +15,11 @@ const convertMovieRatingToLevel = (rating: number): string => {
 };
 
 export type MovieRatingProps = {
-    rating?: number;
-    scoresCount?: number;
+  rating?: number;
+  scoresCount?: number;
 };
 
-export const MovieRating = ({ rating, scoresCount }: MovieRatingProps) => (
+export const MovieRating = ({rating, scoresCount}: MovieRatingProps) => (
   <div className="film-rating">
     <div className="film-rating__score">{rating}</div>
     <p className="film-rating__meta">

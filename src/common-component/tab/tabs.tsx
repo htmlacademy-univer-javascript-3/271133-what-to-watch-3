@@ -1,9 +1,9 @@
-import { TabProps } from './tab.tsx';
-import { ReactElement, useState } from 'react';
+import {TabProps} from './tab.tsx';
+import {ReactElement, useState} from 'react';
 import classNames from 'classnames';
 
 type TabsProps = {
-    children: ReactElement<TabProps>[];
+  children: ReactElement<TabProps>[];
 };
 
 export const Tabs = ({children}: TabsProps) => {

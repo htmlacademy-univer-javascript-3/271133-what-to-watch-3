@@ -1,14 +1,13 @@
-import { Rate } from '../rate/rate.tsx';
-import { useCallback, useState } from 'react';
-import { useAppDispatch } from '../../hooks/store';
-import { usePathId } from '../../hooks/use-path-id';
-import { useNavigate } from 'react-router-dom';
-import { postCommentAction } from '../../store/api-action';
-import { Star } from '../rate/star';
+import {useCallback, useState, MouseEvent} from 'react';
+import {useAppDispatch} from '../../hooks/store';
+import {usePathId} from '../../hooks/use-path-id';
+import {useNavigate} from 'react-router-dom';
+import {postCommentAction} from '../../store/api-action';
+import {Star} from '../rate/star';
 
 export type ReviewForm = {
-    rating: number;
-    comment: string;
+  rating: number;
+  comment: string;
 };
 
 export const AddReviewForm = () => {
@@ -16,6 +15,7 @@ export const AddReviewForm = () => {
   const navigate = useNavigate();
   const [disabled, setDisabled] = useState(false);
   const id = usePathId();
+
   const [reviewForm, setReviewForm] = useState<ReviewForm>({
     rating: 0,
     comment: '',
@@ -23,7 +23,7 @@ export const AddReviewForm = () => {
 
   const handleChange = useCallback(
     (nextValue: Partial<ReviewForm>) => {
-      setReviewForm((prevValue) => prevValue && { ...prevValue, ...nextValue });
+      setReviewForm((prevValue) => prevValue && {...prevValue, ...nextValue});
     },
     [setReviewForm],
   );
@@ -32,11 +32,11 @@ export const AddReviewForm = () => {
     (e: MouseEvent<HTMLElement>) => {
       setDisabled(true);
       e.preventDefault();
-      dispatch(postCommentAction({ filmId: id, ...reviewForm })).then(
+      dispatch(postCommentAction({movieId: id, ...reviewForm})).then(
         (result) => {
           setDisabled(false);
           if (result.payload) {
-            navigate(`/films/${ id}`);
+            navigate(`/films/${id}`);
           }
         },
       );
@@ -54,7 +54,7 @@ export const AddReviewForm = () => {
               <Star
                 key={MAX_RATING - i}
                 value={MAX_RATING - i}
-                onClick={() => onClick(MAX_RATING - i)}
+                onClick={() => handleChange({rating: MAX_RATING - i})}
                 disabled={disabled}
               />
             ))}
@@ -80,13 +80,13 @@ export const AddReviewForm = () => {
               type="submit"
               disabled={
                 reviewForm.comment.length < 50 ||
-                                reviewForm.comment.length > 400 ||
-                                reviewForm.rating === 0 ||
-                                disabled
+                reviewForm.comment.length > 400 ||
+                reviewForm.rating === 0 ||
+                disabled
               }
               onClick={handleSubmit}
             >
-                            Post
+              Post
             </button>
           </div>
         </div>

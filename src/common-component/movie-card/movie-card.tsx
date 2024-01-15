@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { Player } from './player';
-import { MovieListType } from '../../types/movies';
+import {Link} from 'react-router-dom';
+import {useState} from 'react';
+import {Player} from './player';
+import {MovieListType} from '../../types/movies';
 
 
 export const MovieCard = ({
@@ -22,7 +22,7 @@ export const MovieCard = ({
       }}
     >
       <div className="small-film-card__image">
-        <Player previewVideoLink={previewVideoLink} previewImage={previewImage} isHovered={isHovered} />
+        <Player previewVideoLink={previewVideoLink} previewImage={previewImage} isHovered={isHovered}/>
       </div>
       <h3 className="small-film-card__title">
         <Link className="small-film-card__link" to={`/films/${id}`}>{name}</Link>

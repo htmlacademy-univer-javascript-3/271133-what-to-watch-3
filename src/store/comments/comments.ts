@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { Namespace } from '../namespace';
-import { CommentType } from '../../types/movies';
-import { fetchCommentsAction } from '../api-action';
+import {createSlice} from '@reduxjs/toolkit';
+import {Namespace} from '../namespace';
+import {CommentType} from '../../types/movies';
+import {fetchCommentsAction} from '../api-action';
 
 type CommentsState = {
-    isLoading: boolean;
-    error?: string;
-    data: Array<CommentType>;
+  isLoading: boolean;
+  error?: string;
+  data: Array<CommentType>;
 };
 
 const initialState: CommentsState = {

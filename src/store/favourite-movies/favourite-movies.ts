@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { Namespace } from '../namespace';
-import { fetchFavouriteMoviesAction } from '../api-action';
-import { MovieListType } from '../../types/movies';
+import {createSlice} from '@reduxjs/toolkit';
+import {Namespace} from '../namespace';
+import {fetchFavouriteMoviesAction} from '../api-action';
+import {MovieListType} from '../../types/movies';
 
 type FavouriteMoviesState = {
-    isLoading: boolean;
-    error?: string;
-    data: Array<MovieListType>;
+  isLoading: boolean;
+  error?: string;
+  data: Array<MovieListType>;
 };
 
 const initialState: FavouriteMoviesState = {

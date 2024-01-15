@@ -1,8 +1,8 @@
-import { MovieCard } from '../movie-card/movie-card';
-import { MovieListType } from '../../types/movies';
+import {MovieCard} from '../movie-card/movie-card';
+import {MovieListType} from '../../types/movies';
 
 type MoviesListProps = {
-    movies: MovieListType[];
+  movies: MovieListType[];
 };
 
 export const MoviesList = ({movies}: MoviesListProps) => (

@@ -1,5 +1,5 @@
-import { BallTriangle } from 'react-loader-spinner';
-import { ReactNode } from 'react';
+import {BallTriangle} from 'react-loader-spinner';
+import {ReactNode} from 'react';
 
 const LoaderStyle = {
   display: 'flex',
@@ -8,10 +8,10 @@ const LoaderStyle = {
 };
 
 type LoaderProps = {
-    isLoading: boolean;
-    height?: string;
-    backgroundColor?: string;
-    children: ReactNode;
+  isLoading: boolean;
+  height?: string;
+  backgroundColor?: string;
+  children: ReactNode;
 };
 export const Loader = ({
   isLoading,

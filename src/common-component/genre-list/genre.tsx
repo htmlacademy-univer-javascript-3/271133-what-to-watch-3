@@ -1,13 +1,13 @@
 import classNames from 'classnames';
-import { useAppDispatch } from '../../hooks/store';
-import { setGenre } from '../../store/movies/movies';
+import {useAppDispatch} from '../../hooks/store';
+import {setGenre} from '../../store/movies/movies';
 
 type GenreItemProps = {
-    genre: string;
-    isActive?: boolean;
+  genre: string;
+  isActive?: boolean;
 };
 
-export const GenreItem = ({ genre, isActive }: GenreItemProps) => {
+export const GenreItem = ({genre, isActive}: GenreItemProps) => {
   const dispatch = useAppDispatch();
 
   return (

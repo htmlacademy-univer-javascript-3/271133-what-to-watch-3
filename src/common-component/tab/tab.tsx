@@ -1,8 +1,8 @@
-import { ReactElement } from 'react';
+import {ReactElement} from 'react';
 
 export type TabProps = {
-    name: string;
-    content: ReactElement;
+  name: string;
+  content: ReactElement;
 };
 
-export const Tab = ({ content }: TabProps): ReactElement => content;
+export const Tab = ({content}: TabProps): ReactElement => content;
